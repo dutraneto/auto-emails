@@ -1,0 +1,265 @@
+//Header Modules
+.header-links{
+	.bodySmall;
+	color:@cGrey3;
+	padding:10px 0;
+	a{
+		color:@cGrey3;
+		.footerSmall;
+		text-decoration: underline;
+	}
+}
+.header-wrapper{
+	height:80px;
+	background:@cBlack;
+	padding:16px @sideGutter;
+	.verticalmiddle;
+  td{
+    .verticalmiddle;
+  }
+  .logo-cell{
+		.primary{
+
+		}
+		.secondary{
+			padding-left:16px;
+		}
+  }
+
+	.date{
+		.bodySmallBold;
+		padding-top:8px;
+	}
+
+}
+
+//Hero Modules
+.hero-wrapper{
+	.hero-container{
+		padding:0;
+		.logo-cell{
+			text-align: right;
+			img{
+				display: inline-block;
+			}
+		}
+		.hero-padding {
+			padding:0 80px 0 0;
+			.main-title {
+				.boldH1;
+				color:@cWhite;
+				padding:0 0 14px 0;
+			}
+			.desc-container{
+				padding:0 0 14px 0;
+				.border-container{
+					border-left:1px solid @cSecondary;
+					width:15px;
+				}
+				.desc{
+					color:@cWhite;
+					.bodyLarge;
+				}
+			}
+			.cta-container{
+				padding:10px 0 0 0;
+			}
+		}
+	}
+	.asset-container{
+		padding:6px 0 0 0;
+		.asset-desc-container{
+			padding:0 0 0 40px;
+		}
+	}
+
+}
+
+//Body Modules
+.body-wrapper{
+	.inner-padding{
+		background: @cWhite;
+		padding:20px @sideGutter @sideGutter @sideGutter;
+	}
+	.inner-padding-grey{
+		background: @cGrey;
+		padding:40px;
+
+		.bodyLargeBold, .bodyMedium {
+			padding-bottom:16px;
+		}
+	}
+	.inner-callout-padding{
+		padding:0;
+	}
+	.inner-padding, .inner-callout-padding {
+		.heading-2{
+			.boldH2;
+			padding:0 0 10px 0;
+		}
+	  .heading-3{
+	    .H3;
+			padding:0 0 20px 0;
+	  }
+
+		.paragraph {
+			padding:0 0 24px 0;
+			line-height: 21px;
+		}
+
+		.list-container{
+			font-size: 18px;
+			line-height: 22px;
+			padding:0 0 0 0;
+			margin: 10px 0 0 0;
+			margin-left: 0;
+			list-style-type: none;
+			.bullet{
+				padding:0 5px 0 0;
+				line-height: 22px;
+			}
+			.num{
+				width:20px;
+			}
+			.bullet-copy{
+				padding: 0 0 5px 0;
+			}
+		}
+
+		.sub-heading{
+			.bodyLarge;
+			padding:0 0 12px 0;
+		}
+
+		[class$="-label"]{
+			.labelLarge;
+		}
+		.title{
+			.bodyLargeBold;
+			padding:0 0 12px 0;
+		}
+		.desc{
+			padding:0 0 12px 0;
+		}
+		.asset-img, .article-img{
+				padding:0 0 29px 0;
+			}
+			.asset-img{
+				width:184px;
+			}
+			.asset-spacer, .quote-spacer{
+				width:32px;
+				height:32px;
+			}
+
+			.gutter-spacer, .event-spacer{
+				width:@contentGutter;
+				height:@contentGutter;
+			}
+
+		//individual module styles
+
+		.inner-callout{
+			.callout-container{
+				padding:20px @sideGutter @sideGutter @sideGutter;
+				.greyBG;
+			}
+		}
+
+
+		.inner-sig{
+			.sig-container{
+				padding:20px 0 60px 0;
+
+				.sig-img{
+					width:61px;
+				}
+				.sig-name{
+					.bodyLargeBold;
+					line-height:21px;
+				}
+				.sig-regards {
+					padding-bottom:20px;
+				}
+				.sig-info{
+				line-height:21px;
+					padding:6px 0 0 0;
+				}
+			}
+		}
+
+		.spacer-container{
+			height:40px;
+			line-height:40px;
+			font-size:1px;
+		}
+	}
+}
+//Footer Module{
+.footer-wrapper{
+	.footer-container{
+		background:@cBlack;
+		padding:20px @sideGutter;
+		a{
+			color:@cText;
+			text-decoration: none;
+		}
+		.footer-links{
+			.footerSmall;
+			.verticalbottom;
+			a{
+				.footerSmall;
+			}
+			td{
+				border-right:1px solid @cText;
+				padding:0 20px;
+				.footerSmall;
+				&:last-child{
+					border-right:none;
+					padding:0 0 0 20px;
+				}
+				&:first-child{
+					padding:0 20px 0 0;
+				}
+			}
+		}
+		.footer-logo{
+			.nowrap;
+		}
+		.footer-social{
+			width:100%;
+			.verticalbottom;
+			td{
+				padding:0 5px;
+				.verticalbottom;
+				&:first-child{
+					padding:0 5px 0 0;
+				}
+				&:last-child{
+					padding:0 0 0 5px;
+				}
+			}
+		}
+		.footer-border{
+			height:28px;
+			line-height:28px;
+			font-size:1px;
+			border-bottom:1px solid @cGrey1;
+		}
+		.copyright{
+			.footerSmall;
+				color:@cWhite;
+			padding:24px 0 0 0;
+			text-align: center;
+			a{
+				color:@cWhite;
+				text-decoration: underline;
+			}
+		}
+		.footer-spacer{
+			width:120px;
+			white-space:nowrap;
+			min-width:120px;
+		}
+	}
+}
