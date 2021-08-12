@@ -43,6 +43,7 @@ node_modules/
 jspm_packages/
 
 # personal
+.DS_Store
 mjml/
 inline.index.html
 
