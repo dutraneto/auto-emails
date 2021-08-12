@@ -43,56 +43,30 @@ const reloadBrowser = () => browserSync.reload()
 // clear the cache browser
 const clearCache = () => cache.clearAll()
 
-// Minify CSS and ADD vendor prefix
 const buildCss = () => {
-    // let sassOptions = {
-    //     outputStyle: 'compressed',
-    // }
-    return (
-        src(input.lessPath)
-            // .pipe(sourcemaps.init())
-            .pipe(gulpLess())
-            // .pipe(postcss(plugins))
-            // .pipe(concat('styles.min.css'))
-            // .pipe(sourcemaps.write('.'))
-            .pipe(dest(output.cssPath))
-            .pipe(browserSync.stream())
-    )
+    return src(input.lessPath)
+        .pipe(gulpLess())
+        .pipe(dest(output.cssPath))
+        .pipe(browserSync.stream())
 }
-
-// gulp.task('default', function() {
-//     return gulp.src('./*.html')
-//         .pipe(inlineCss())
-//         .pipe(gulp.dest('build/'));
-// });
-
 
 // Compile Templates
 const buildHtml = () => {
-    return (
-        src(input.htmlPath)
-            .pipe(inlineCss({
+    return src(input.htmlPath)
+        .pipe(
+            inlineCss({
                 applyStyleTags: true,
-            	applyLinkTags: true,
-            	removeStyleTags: true,
-            	removeLinkTags: true
-            }))
-            .pipe(dest(output.public))
-    )
+                applyLinkTags: true,
+                removeStyleTags: false,
+                removeLinkTags: true,
+            })
+        )
+        .pipe(dest(output.public))
 }
 
 // Optimize images
 const buildImg = () => {
-    // const options = {
-    //     optimizationLevel: 5,
-    //     progressive: true,
-    //     interlaced: true,
-    // }
-    return (
-        src(input.imgPath)
-            // .pipe(cache(imagemin(options)))
-            .pipe(dest(output.imgPath))
-    )
+    return src(input.imgPath).pipe(dest(output.imgPath))
 }
 
 // Clean public and tmp
@@ -106,6 +80,5 @@ task('buildImg', () => buildImg())
 // clear image caches
 task('clearCache', () => clearCache())
 task('cleanBuild', () => cleanBuild())
-// task('copyStatic', () => copy())
-// exports.buildCopy = buildCopy
-task('buildAll', series('cleanBuild','buildCss', parallel('buildImg', 'buildHtml')))
+
+task('buildAll', series('cleanBuild', 'buildCss', 'buildHtml', parallel('buildImg')))

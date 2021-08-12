@@ -237,9 +237,7 @@
   font-size: 18px;
   line-height: 22px;
   padding: 0 0 0 0;
-  margin: 10px 0 0 0;
-  margin-left: 0;
-  list-style-type: none;
+  margin: 10px 0 0 30px;
 }
 .body-wrapper .inner-padding .list-container .bullet,
 .body-wrapper .inner-callout-padding .list-container .bullet {
