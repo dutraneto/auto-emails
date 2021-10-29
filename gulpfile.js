@@ -2,6 +2,7 @@ const { src, watch, series, parallel, dest, task } = require('gulp')
 const del = require('del')
 const gulpLess = require('gulp-less')
 const inlineCss = require('gulp-inline-css')
+const styleInject = require('gulp-style-inject')
 const browserSync = require('browser-sync').create()
 
 // input files
@@ -14,6 +15,7 @@ const input = {
     port: 4000,
 }
 
+// output files
 const output = {
     public: 'public',
     cssPath: 'public/css/',
@@ -22,10 +24,13 @@ const output = {
 }
 
 /** FUNCTIONS --------*/
+// Print a simple watch message
+const printMessage = () => console.log(`Gulp is watching over ${input.htmlPath} and ${input.lessPath}... go ahead and make a change`)
+
 // serve files
 const serve = () => {
-    watch(input.lessPath).on('change', series('buildAll', reloadBrowser))
-    watch(input.htmlPath).on('change', series('buildAll', reloadBrowser))
+    printMessage()
+    watch([input.lessPath, input.htmlPath]).on('change', series('buildAll', reloadBrowser))
 
     browserSync.init({
         browser: 'Google Chrome',
@@ -53,6 +58,9 @@ const buildCss = () => {
 // Compile Templates
 const buildHtml = () => {
     return src(input.htmlPath)
+        .pipe(styleInject({
+            encapsulated: true,
+        }))
         .pipe(
             inlineCss({
                 applyStyleTags: true,
@@ -82,6 +90,8 @@ task('buildCss', () => buildCss())
 task('buildImg', () => buildImg())
 // clear image caches
 task('clearCache', () => clearCache())
-task('cleanBuild', () => cleanBuild())
 
-task('buildAll', series('cleanBuild', 'buildCss', 'buildHtml', parallel('buildImg')))
+task('cleanBuild', () => cleanBuild())
+task('printMsg', () => printMessage())
+
+task('buildAll', series('cleanBuild', 'buildCss', 'buildHtml', 'printMsg', parallel('buildImg')))
