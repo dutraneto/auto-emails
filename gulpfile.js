@@ -59,6 +59,8 @@ const buildHtml = () => {
                 applyLinkTags: true,
                 removeStyleTags: false,
                 removeLinkTags: true,
+                preserveMediaQueries: true,
+                applyTableAttributes: true
             })
         )
         .pipe(dest(output.public))
