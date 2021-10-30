@@ -94,4 +94,4 @@ task('clearCache', () => clearCache())
 task('cleanBuild', () => cleanBuild())
 task('printMsg', () => printMessage())
 
-task('buildAll', series('cleanBuild', 'buildCss', 'buildHtml', 'printMsg', parallel('buildImg')))
+task('buildAll', series('cleanBuild', 'buildCss', 'buildHtml', parallel('buildImg')))

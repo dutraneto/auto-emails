@@ -27,6 +27,7 @@ With only a hundred lines of code you gonna get rid of:
 
 ## Live Demo
 
+![](https://res.cloudinary.com/duim1pyqp/image/upload/v1635558529/samples/ezgif.com-gif-maker_hrvhuw.gif)
 
 
 ## Installation
@@ -49,29 +50,3 @@ $ npm start
 ```
 $ npm run build
 ```
-
-
-## Designs
-
-### Prototype Links
-
-- [Desktop]()
-
-- [Mobile]()
-
-
-### Screenshots
-
-#### Phone
----
-![]()
-
-
-#### Tablet
----
-![]()
-
-
-#### Desktop
----
-![]()
