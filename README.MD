@@ -27,7 +27,7 @@ With only a hundred lines of code you gonna get rid of:
 
 ## Live Demo
 
-![](https://res.cloudinary.com/duim1pyqp/video/upload/c_scale,q_100,w_774/v1635708987/samples/video2_qberux.gif)
+![](https://res.cloudinary.com/duim1pyqp/image/upload/v1635710841/samples/video2_qberux_w5oxio.gif)
 
 
 ## Installation
