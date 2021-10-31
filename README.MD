@@ -27,7 +27,7 @@ With only a hundred lines of code you gonna get rid of:
 
 ## Live Demo
 
-![](https://res.cloudinary.com/duim1pyqp/image/upload/v1635558529/samples/ezgif.com-gif-maker_hrvhuw.gif)
+![](https://res.cloudinary.com/duim1pyqp/video/upload/v1635708987/samples/video2_qberux.mov)
 
 
 ## Installation
