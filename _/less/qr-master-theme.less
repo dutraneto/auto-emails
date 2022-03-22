@@ -4,7 +4,7 @@
 //Monochrome
 @cWhite: #ffffff;
 @cBlack: #000000;
-@cGrey0: #3E3E3E; //Type + key lines
+@cGrey0: #3e3e3e; //Type + key lines
 @cGrey3: #666666;
 @cGrey2: #969696; //table key lines
 @cGrey1: #c8c8c8; //footnote + boilerplate + event form key lines
@@ -12,160 +12,158 @@
 @cGrey: #eeeeee; //header
 @cLightGrey: #f5f5f5; //backgrounds
 
-
 //Colour
-@cBlue:#00A7FF;
-@cBlueAlt:#007ABA;
-@cBlueLight:#66CAFF;
+@cBlue: #00a7ff;
+@cBlueAlt: #007aba;
+@cBlueLight: #66caff;
+@cLink: #2c5697;
+@cRed: #e03c31;
 
 //Main template colours
-@cPrimary:@cBlue;
-@cSecondary:@cBlueAlt;
-@cText:@cBlack;
-
+@cPrimary: @cBlue;
+@cSecondary: @cBlueAlt;
+@cText: @cBlack;
 
 //define font here
-@fontFamily:'proxima-nova',Arial,sans-serif;
-@altFontFamily:Arial,sans-serif;
-.boldFont{
-	font-weight:700;
+@fontFamily: 'proxima-nova', Arial, sans-serif;
+@altFontFamily: Arial, sans-serif;
+.boldFont {
+  font-weight: 700;
 }
-
 
 //Headers
-.H1{
-	font-size:40px;
-	line-height:40px;
+.H1 {
+  font-size: 40px;
+  line-height: 40px;
 }
-.boldH1{
-	.H1;
-	.boldFont;
-}
-
-.H2{
-	font-size:32px;
-	line-height:40px;
+.boldH1 {
+  .H1;
+  .boldFont;
 }
 
-.boldH2{
-	.H2;
-	.boldFont;
+.H2 {
+  font-size: 32px;
+  line-height: 40px;
 }
 
-.H3{
-	font-size:24px;
-	line-height:32px;
+.boldH2 {
+  .H2;
+  .boldFont;
 }
 
-.boldH3{
-	.H3;
-	.boldFont;
+.H3 {
+  font-size: 24px;
+  line-height: 32px;
 }
 
+.boldH3 {
+  .H3;
+  .boldFont;
+}
 
 //Body
-.bodyLarge{
-	font-size:18px;
-	line-height:24px;
+.bodyLarge {
+  font-size: 18px;
+  line-height: 24px;
 }
 
-.bodyLargeBold{
-	.bodyLarge;
-	.boldFont;
+.bodyLargeBold {
+  .bodyLarge;
+  .boldFont;
 }
 
-.bodyMedium{
-	font-size:16px;
-	line-height:20px;
+.bodyMedium {
+  font-size: 16px;
+  line-height: 20px;
 }
 
-.bodySmall{
-  font-size:14px;
-  line-height:16px;
+.bodySmall {
+  font-size: 14px;
+  line-height: 16px;
 }
 
-.bodySmallBold{
+.bodySmallBold {
   .bodySmall;
   .boldFont;
 }
 
-
-.bodySmallSocial{
-  font-size:12px;
-  line-height:16px;
+.bodySmallSocial {
+  font-size: 12px;
+  line-height: 16px;
 }
 
-.bodySmallLegal{
-  font-size:12px;
-  line-height:16px;
+.bodySmallLegal {
+  font-size: 12px;
+  line-height: 16px;
 }
 
-.labelLarge{
-  font-size:14px;
-  line-height:16px;
+.labelLarge {
+  font-size: 14px;
+  line-height: 16px;
   .boldFont;
 }
-.labelSmall{
-  font-size:12px;
-  line-height:16px;
+.labelSmall {
+  font-size: 12px;
+  line-height: 16px;
 }
 
-.statLarge{
-	font-size:120px;
-	line-height: 1;
+.statLarge {
+  font-size: 120px;
+  line-height: 1;
 }
 
-.footerSmall{
-	font-size:9px;
-	line-height: 1;
-	font-family: @altFontFamily;
+.footerSmall {
+  font-size: 14px;
+  line-height: 1;
+  font-family: @altFontFamily;
 }
 
 //CTAs
 
-.cta-container{
-	padding:0 0 0 0;
-	.cta-primary{
-		background:@cPrimary;
-		box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-		padding:10px 20px;
-		color:@cWhite;
-		a{
-			.bodyLargeBold;
-			line-height:1;
-			display:block;
-			text-decoration: none;
-			color:@cWhite;
-		}
-	}
-	.cta-secondary{
-		background:transparent;
-		padding:13px 38px;
-		color:@cPrimary;
-		border:2px solid @cPrimary;
-		.bodyLargeBold;
-		a{
-			color:@cPrimary;
-			line-height:1;
-			display:block;
-			text-decoration: none;
-		}
-	}
-	.cta-tertiary, .cta-chevron{
-		color:@cSecondary;
-		.bodyLargeBold;
-		padding:0 0 0 4px;
-		a{
-			text-decoration: none;
-			color:@cPrimary;
-			.bodyLargeBold;
-		}
-	}
-	.cta-chevron{
-		padding-top:1px;
-	}
+.cta-container {
+  padding: 0 0 0 0;
+  .cta-primary {
+    background: @cRed;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    padding: 24px 44px;
+    color: @cWhite;
+    a {
+      .bodyLargeBold;
+      line-height: 1;
+      display: block;
+      text-decoration: none;
+      color: @cWhite;
+    }
+  }
+  .cta-secondary {
+    background: transparent;
+    padding: 13px 38px;
+    color: @cPrimary;
+    border: 2px solid @cPrimary;
+    .bodyLargeBold;
+    a {
+      color: @cPrimary;
+      line-height: 1;
+      display: block;
+      text-decoration: none;
+    }
+  }
+  .cta-tertiary,
+  .cta-chevron {
+    color: @cLink;
+    .bodyMedium;
+    padding: 0 0 0 4px;
+    a {
+      text-decoration: none;
+      color: @cLink;
+      .bodyMedium;
+    }
+  }
+  .cta-chevron {
+    padding-top: 1px;
+  }
 }
 
 //grid
-@sideGutter: 40px; //total width - content width
+@sideGutter: 81px; //total width - content width
 @contentGutter: 24px;
